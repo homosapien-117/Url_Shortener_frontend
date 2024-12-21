@@ -21,7 +21,14 @@ function App() {
     <Authprovider>
       <Router>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route
+            path="/"
+            element={
+              <AuthRoute>
+                <LoginPage />
+              </AuthRoute>
+            }
+          />
           <Route
             path="/login"
             element={
